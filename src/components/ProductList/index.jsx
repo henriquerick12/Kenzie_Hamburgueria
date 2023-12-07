@@ -1,11 +1,16 @@
-import { Container, Content } from "./index";
+import { Container } from "./index";
+
+import { Cards } from "./Cards/index.jsx";
 
 export const ProductsList = () => {
   return (
     <Container>
-      <Content>
-        
-      </Content>
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
     </Container>
   );
 };
