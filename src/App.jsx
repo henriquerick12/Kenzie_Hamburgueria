@@ -1,9 +1,21 @@
-import { useState } from "react";
+import { GlobalStyle } from "./styles/globalStyles";
+import style from "./App.module.css";
+
+import { Header } from "./components/Header/index";
+import { ProductsList } from "./components/ProductList/index";
+import { CardList } from "./components/CardList/index";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <></>;
+  return (
+    <>
+      <Header />
+      <main className={style.container}>
+        <ProductsList />
+        <CardList />
+      </main>
+      <GlobalStyle />
+    </>
+  );
 }
 
 export default App;
