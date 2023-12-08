@@ -1,20 +1,19 @@
-import { ButtonCards } from "../../ButtonCard/index.jsx";
-import { Container, Content, Head, Body } from "./index";
+import { Container, Content, Head, Body, Button } from "./index";
 
-import Img from "../../../assets/img-1.svg";
-
-export const Cards = () => {
+export const Cards = ({ product, handleClick }) => {
   return (
     <Container>
       <Content>
         <Head>
-          <img src={Img} />
+          <img src={product.img} />
         </Head>
         <Body>
-          <h3>Hamburguer</h3>
-          <span>Sanduíches</span>
-          <span>R$ 14.00</span>
-          <ButtonCards name="Adicionar" size={true} />
+          <h3>{product.name}</h3>
+          <span>{product.category}</span>
+          <span>{`R$ ${product.price.toFixed(2)}`}</span>
+          <Button onClick={(e) => handleClick(e)} id={product.id}>
+            Adicionar
+          </Button>
         </Body>
       </Content>
     </Container>

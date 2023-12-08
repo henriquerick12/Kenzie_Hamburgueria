@@ -2,15 +2,12 @@ import { Container } from "./index";
 
 import { Cards } from "./Cards/index.jsx";
 
-export const ProductsList = () => {
+export const ProductsList = ({ product, handleClick }) => {
   return (
     <Container>
-      <Cards />
-      <Cards />
-      <Cards />
-      <Cards />
-      <Cards />
-      <Cards />
+      {product.map((products) => {
+        return <Cards key={products.id} product={products} handleClick={handleClick} />;
+      })}
     </Container>
   );
 };

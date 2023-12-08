@@ -14,7 +14,6 @@ export const Content = styled.div`
 
 export const Head = styled.div`
   background-color: var(--grey-20);
-  height: 200px;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -24,6 +23,7 @@ export const Head = styled.div`
     display: flex;
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
 `;
 
@@ -57,10 +57,30 @@ export const Body = styled.div`
   span:nth-child(3) {
     color: var(--color-primary);
     font-family: "Inter", sans-serif;
-    font-size: 14px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 600;
     line-height: 24px;
     margin-bottom: 14px;
+  }
+`;
+
+export const Button = styled.button`
+  border-radius: 8px;
+  font-weight: 500;
+  transition: 0.3s ease;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  border: 2px solid var(--color-primary);
+  background: var(--color-primary);
+  height: 40px;
+  color: #fff;
+  padding: 0px 20px;
+
+  &:hover {
+    border-radius: 8px;
+    border: 2px solid var(--color-primary-50);
+    background: var(--color-primary-50);
   }
 `;

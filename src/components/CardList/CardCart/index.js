@@ -32,7 +32,7 @@ export const Body = styled.div`
     span {
       color: #333;
       font-family: "Inter", sans-serif;
-      font-size: 1rem;
+      font-size: 14px;
       font-style: normal;
       font-weight: 700;
       display: block;
@@ -40,12 +40,12 @@ export const Body = styled.div`
     }
 
     p {
+      display: flex;
       color: var(--grey-300);
       font-family: "Inter", sans-serif;
       font-size: 12px;
       font-style: normal;
       font-weight: 400;
-      line-height: 16px;
     }
 
     button {

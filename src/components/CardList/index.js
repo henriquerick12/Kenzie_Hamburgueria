@@ -45,6 +45,15 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  max-height: 306px;
+  overflow-y: auto;
+
+  p {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+  }
 `;
 
 export const Head = styled.div`

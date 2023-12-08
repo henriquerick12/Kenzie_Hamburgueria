@@ -1,24 +1,22 @@
 import { Container, Body } from "./index.js";
 
-import Img from "../../../assets/hamburguer.svg";
-
-export const CardCart = () => {
+export const CardCart = ({ cart }) => {
   return (
     <Container>
-        <Body>
-          <div className="body__img">
-            <img src={Img} alt="" />
+      <Body>
+        <div className="body__img">
+          <img src={cart.img} />
+        </div>
+        <div className="body__content">
+          <div>
+            <span>{cart.name}</span>
+            <p>{cart.category}</p>
           </div>
-          <div className="body__content">
-            <div>
-              <span>Hamburguer</span>
-              <p>Sanduiches</p>
-            </div>
-            <div>
-              <button>Remover</button>
-            </div>
+          <div>
+            <button>Remover</button>
           </div>
-        </Body>
+        </div>
+      </Body>
     </Container>
   );
 };
