@@ -11,9 +11,7 @@ function App() {
   const [product, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
 
-  const totalCart = cart.reduce((acc, prev) => {
-    return acc += prev.price
-  }, 0)
+  
 
   const getProducts = () => {
     api
@@ -41,7 +39,7 @@ function App() {
       <Header />
       <main className={style.container}>
         <ProductsList product={product} handleClick={handleClick} />
-        <CardList cart={cart} totalCart={totalCart} setCart={setCart}/>
+        <CardList cart={cart} setCart={setCart}/>
       </main>
       <GlobalStyle />
     </>

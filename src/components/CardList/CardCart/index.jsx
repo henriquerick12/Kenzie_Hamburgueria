@@ -1,6 +1,8 @@
 import { Container, Body } from "./index.js";
 
 export const CardCart = ({ cart }) => {
+  const handleRemove
+
   return (
     <Container>
       <Body>
@@ -13,7 +15,7 @@ export const CardCart = ({ cart }) => {
             <p>{cart.category}</p>
           </div>
           <div>
-            <button>Remover</button>
+            <button onClick={}>Remover</button>
           </div>
         </div>
       </Body>

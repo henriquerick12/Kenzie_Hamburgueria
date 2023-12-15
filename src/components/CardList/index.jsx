@@ -2,10 +2,14 @@ import { Container, Head, Content, Button } from "./index";
 
 import { CardCart } from "./CardCart/index.jsx";
 
-export const CardList = ({ cart, totalCart, setCart }) => {
+export const CardList = ({ cart, setCart }) => {
   const handleRemove = () => {
-    alert("oj");
+    setCart([])
   };
+
+  const totalCart = cart.reduce((acc, prev) => {
+    return acc += prev.price
+  }, 0)
 
   return (
     <Container>
@@ -14,8 +18,8 @@ export const CardList = ({ cart, totalCart, setCart }) => {
         {cart == "" ? (
           <p>Adicione um produto</p>
         ) : (
-          cart.map((carts) => {
-            return <CardCart key={carts.id} cart={carts} />;
+          cart.map((carts, i) => {
+            return <CardCart key={i} cart={carts} />;
           })
         )}
       </Content>
