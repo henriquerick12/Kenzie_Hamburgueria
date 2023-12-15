@@ -25,6 +25,11 @@ export const Body = styled.div`
     justify-content: space-between;
     flex: 1;
 
+    @media (max-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+    }
+
     @media (max-width: 768px) {
       display: flex;
       flex-direction: column;
@@ -33,7 +38,7 @@ export const Body = styled.div`
     span {
       color: #333;
       font-family: "Inter", sans-serif;
-      font-size: 14px;
+      font-size: 12px;
       font-style: normal;
       font-weight: 700;
       display: block;

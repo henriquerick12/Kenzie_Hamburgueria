@@ -5,7 +5,43 @@ export const Container = styled.div`
   height: 80px;
   background: var(--grey-0);
 
-  
+  i {
+    position: relative;
+    display: none;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .icon__count {
+    position: absolute;
+    top: -8px;
+    left: -5px;
+    background-color: red;
+    width: 15px;
+    color: #fff;
+    font-size: .6rem;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    i {
+      display: flex;
+    }
+    .icon {
+      display: flex;
+    }
+
+    .icon__count{
+      display: flex;
+    }
+  }
 `;
 
 export const Content = styled.div`
@@ -48,18 +84,18 @@ export const Search = styled.div`
     line-height: normal;
 
     &::placeholder {
-        color: var(--grey-20);
+      color: var(--grey-20);
     }
   }
-  @media (max-width:768px) {
+  @media (max-width: 768px) {
     display: none;
   }
 `;
 
-export const Button = styled.button `
+export const Button = styled.button`
   border-radius: 8px;
   font-weight: 500;
-  transition: .3s ease;
+  transition: 0.3s ease;
   cursor: pointer;
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -74,4 +110,4 @@ export const Button = styled.button `
     border: 2px solid var(--color-primary-50);
     background: var(--color-primary-50);
   }
-`
+`;
