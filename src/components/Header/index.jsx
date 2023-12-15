@@ -1,7 +1,6 @@
 import Logo from "../../assets/logo.svg";
 
-import { Container, Search, Content } from "./styles.js";
-import { ButtonCards } from '../ButtonCard/index.jsx'
+import { Container, Search, Content, Button } from "./styles.js";
 
 export const Header = () => {
   return (
@@ -10,7 +9,7 @@ export const Header = () => {
         <img src={Logo} alt="Logo" />
         <Search>
           <input type="text" placeholder="Digite sua Pesquisa" />
-          <ButtonCards name="Pesquisar" size={true}/>
+          <Button>Pesquisar</Button>
         </Search>
       </Content>
     </Container>

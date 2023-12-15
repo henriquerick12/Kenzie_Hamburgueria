@@ -31,10 +31,10 @@ export const Container = styled.div`
       span {
         color: #828282;
         font-family: "Inter", sans-serif;
-        font-size: .9rem;
+        font-size: 0.9rem;
         font-style: normal;
         font-weight: 600;
-        line-height: 24px; 
+        line-height: 24px;
       }
     }
   }
@@ -52,7 +52,7 @@ export const Content = styled.div`
     text-align: center;
     font-size: 1.2rem;
     font-weight: 300;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
   }
 `;
 
@@ -70,4 +70,24 @@ export const Head = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
+`;
+
+export const Button = styled.button`
+  border-radius: 8px;
+  font-weight: 500;
+  transition: 0.3s ease;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  border: 2px solid var(--color-primary);
+  background: var(--color-primary);
+  height: 60px;
+  color: #fff;
+  padding: 0px 20px;
+
+  &:hover {
+    border-radius: 8px;
+    border: 2px solid var(--color-primary-50);
+    background: var(--color-primary-50);
+  }
 `;

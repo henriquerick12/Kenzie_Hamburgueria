@@ -41,7 +41,7 @@ function App() {
       <Header />
       <main className={style.container}>
         <ProductsList product={product} handleClick={handleClick} />
-        <CardList cart={cart} totalCart={totalCart}/>
+        <CardList cart={cart} totalCart={totalCart} setCart={setCart}/>
       </main>
       <GlobalStyle />
     </>
