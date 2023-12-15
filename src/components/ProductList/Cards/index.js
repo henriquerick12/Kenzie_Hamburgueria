@@ -40,6 +40,10 @@ export const Body = styled.div`
     padding-top: 6.667px;
     font-weight: 700;
     line-height: 24px;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+  }
   }
 
   span:nth-child(2) {

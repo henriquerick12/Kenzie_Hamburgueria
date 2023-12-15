@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-
-  
-`;
-
+export const Container = styled.div``;
 
 export const Body = styled.div`
   display: flex;
@@ -28,6 +24,11 @@ export const Body = styled.div`
     display: flex;
     justify-content: space-between;
     flex: 1;
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
 
     span {
       color: #333;
@@ -62,5 +63,3 @@ export const Body = styled.div`
     }
   }
 `;
-
-

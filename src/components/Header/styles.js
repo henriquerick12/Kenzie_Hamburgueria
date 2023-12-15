@@ -4,6 +4,8 @@ export const Container = styled.div`
   width: 100%;
   height: 80px;
   background: var(--grey-0);
+
+  
 `;
 
 export const Content = styled.div`
@@ -48,6 +50,9 @@ export const Search = styled.div`
     &::placeholder {
         color: var(--grey-20);
     }
+  }
+  @media (max-width:768px) {
+    display: none;
   }
 `;
 

@@ -11,8 +11,6 @@ function App() {
   const [product, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
 
-  
-
   const getProducts = () => {
     api
       .get()
@@ -34,12 +32,20 @@ function App() {
     setCart(newCart);
   };
 
+  const handleRemoveItem = (id) => {
+    const findItem = cart.filter((element) => {
+      return element.id !== id
+    });
+
+    setCart(findItem)
+  };
+
   return (
     <>
       <Header />
       <main className={style.container}>
         <ProductsList product={product} handleClick={handleClick} />
-        <CardList cart={cart} setCart={setCart}/>
+        <CardList cart={cart} setCart={setCart} handleRemoveItem={handleRemoveItem}/>
       </main>
       <GlobalStyle />
     </>

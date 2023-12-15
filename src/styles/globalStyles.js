@@ -24,6 +24,11 @@ export const GlobalStyle = createGlobalStyle`
         outline: 0;
     }
 
+    html, body {
+        min-height: 100vh;
+        width: 100%;
+    }
+
     img {
         display: flex;
         width: 100%;
