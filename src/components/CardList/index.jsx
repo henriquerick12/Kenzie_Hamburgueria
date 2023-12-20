@@ -2,7 +2,7 @@ import { Container, Head, Content, Button } from "./index";
 
 import { CardCart } from "./CardCart/index.jsx";
 
-export const CardList = ({ cart, setCart, handleRemoveItem }) => {
+export const CardList = ({ cart, setCart, handleRemoveItem, showcart }) => {
   const handleRemove = () => {
     setCart([])
   };
@@ -12,7 +12,7 @@ export const CardList = ({ cart, setCart, handleRemoveItem }) => {
   }, 0)
 
   return (
-    <Container>
+    <Container $show={showcart}>
       <Head>Carrinho de compras</Head>
       <Content>
         {cart == "" ? (

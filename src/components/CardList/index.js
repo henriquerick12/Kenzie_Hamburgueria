@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 365px;
   border-radius: 0px 0px 5px 5px;
   background: #f5f5f5;
   display: flex;
   flex-direction: column;
+  flex: 2;
 
   footer {
     padding: 10px 16px;
@@ -40,7 +40,14 @@ export const Container = styled.div`
   }
 
   @media (max-width:768px) {
-    display: none;
+    display: ${props => props.$show ? "flex" : "none"};
+    position: absolute;
+    flex-grow: 1;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
   }
 `;
 

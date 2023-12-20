@@ -1,20 +1,21 @@
-import { Container, Search, Content, Button } from "./styles.js";
+import { Container, Content } from "./styles.js";
 
 import { FaCartShopping } from "react-icons/fa6";
 import Logo from "../../assets/logo.svg";
 
-export const Header = () => {
+export const Header = ({ cart, handleShowCart }) => {
   return (
     <Container>
       <Content>
         <img src={Logo} alt="Logo" />
-        <Search>
-          <input type="text" placeholder="Digite sua Pesquisa" />
-          <Button>Pesquisar</Button>
-        </Search>
+
         <i>
-          <FaCartShopping className="icon" size={25} />
-          <span className="icon__count">1</span>
+          <FaCartShopping
+            className="icon"
+            size={25}
+            onClick={() => handleShowCart()}
+          />
+          <span className="icon__count">{cart.length}</span>
         </i>
       </Content>
     </Container>
